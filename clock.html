@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Clock</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background-color: transparent; 
+            overflow: hidden;
+        }
+        
+        #clock-container {
+            /* BRAND MATCHING: Dark Charcoal Background */
+            background-color: #232B2B; 
+            
+            /* BRAND MATCHING: Gold Border */
+            border: 2px solid #E3AE57; 
+            
+            padding: 5px 10px;
+            border-radius: 6px; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 130px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+        }
+
+        #greeting {
+            font-size: 10px;
+            color: #ffffff; 
+            margin-bottom: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #clock {
+            font-size: 18px;
+            font-weight: 700;
+            /* BRAND MATCHING: Gold Time Display */
+            color: #E3AE57; 
+            line-height: 1.1;
+            margin-bottom: 2px;
+        }
+
+        #date-display {
+            font-size: 10px;
+            color: #bbbbbb; 
+            font-weight: 300;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="clock-container">
+        <div id="greeting"></div>
+        <div id="clock">Loading...</div>
+        <div id="date-display"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
