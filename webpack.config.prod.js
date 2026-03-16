@@ -13,6 +13,7 @@ module.exports = merge(common, {
       patterns: [
         { from: "img", to: "img" },
         { from: "css", to: "css" },
+        { from: "js/app.js", to: "js/app.js" },
         { from: "js/jquery.js", to: "js/jquery.js" },
         { from: "js/bootstrap.min.js", to: "js/bootstrap.min.js" },
         { from: "js/jquery.parallax.js", to: "js/jquery.parallax.js" },
