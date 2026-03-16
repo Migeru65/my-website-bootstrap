@@ -504,6 +504,7 @@ a:hover, a:active, a:focus {
     position: absolute;
     top: 0;
     opacity: 0.7;
+    pointer-events: none;
 }
 
 #works .fa {
