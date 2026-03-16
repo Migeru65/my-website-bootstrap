@@ -20,6 +20,7 @@ module.exports = merge(common, {
         { from: "js/smoothscroll.js", to: "js/smoothscroll.js" },
         { from: "js/wow.min.js", to: "js/wow.min.js" },
         { from: "js/custom.js", to: "js/custom.js" },
+        { from: "ball.html", to: "ball.html" },
         { from: "clock.html", to: "clock.html" },
         { from: "icon.svg", to: "icon.svg" },
         { from: "favicon.ico", to: "favicon.ico" },
