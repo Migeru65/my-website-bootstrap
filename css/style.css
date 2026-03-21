@@ -90,7 +90,7 @@ p {
 .section-btn:hover {
   background: #E3AE57;
   border-color: transparent;
-  color: #ffffff;
+  color: #111;
 }
 
 .btn-success:focus {
@@ -139,11 +139,6 @@ p {
   text-align: center;
 }
 
-#experience,
-#education {
-  background: #E9724C;
-}
-
 .background-image {
     background-position: 50% 50% !important;
     background-size: cover !important;
@@ -165,9 +160,16 @@ p {
   color: #E3AE57;
 }
 
-/* Updated background to a slightly darker yellow for white text, or rely on dark text styling in HTML */
+.color-yellow-dark {
+  color: #c48c36;
+}
+
 .bg-yellow {
   background: #E3AE57;
+}
+
+.bg-orange {
+  background: #E9724C;
 }
 
 .bg-white {
@@ -187,12 +189,12 @@ html{
 }
 
 a {
-  color: #E3AE57;
+  color: #c48c36;
   transition: 0.5s;
   text-decoration: none !important;
 }
 a:hover, a:active, a:focus {
-  color: #E3AE57;
+  color: #c48c36;
   outline: none;
 }
 
@@ -278,7 +280,7 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .nav-link:hover {
     background: transparent;
-    color: #E3AE57;
+    color: #c48c36;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
@@ -288,7 +290,8 @@ a:hover, a:active, a:focus {
 
 .custom-navbar .nav-link.active {
     background-color: transparent;
-    color: #E3AE57 !important;
+    color: #c48c36 !important;
+    font-weight: 700;
 }
 
 @media(min-width:768px) {
@@ -318,7 +321,6 @@ a:hover, a:active, a:focus {
   padding-left: 0;
 }
 
-/* Updated to WebP */
 #home .home-img {
   background: url("../img/home-img.webp") no-repeat;
   background-size: cover;
@@ -338,7 +340,6 @@ a:hover, a:active, a:focus {
    About section              
 -----------------------------------------*/
 
-/* Updated to WebP */
 #about .about-img {
     background: url('../img/about-img.webp') no-repeat;
 }
@@ -370,10 +371,6 @@ a:hover, a:active, a:focus {
     Hobbies section              
 -----------------------------------------*/
 
-#hobbies {
-  background: #E9724C;
-}
-
 #hobbies p {
   font-size: 18px;
   line-height: 30px;
@@ -392,7 +389,6 @@ a:hover, a:active, a:focus {
     Experience section              
 -----------------------------------------*/
 
-/* Updated to WebP */
 #experience .experience-img {
   background: url('../img/experience-img.webp') no-repeat;
 }
@@ -406,20 +402,10 @@ a:hover, a:active, a:focus {
   margin-right: 14px;
 }
 
-#experience small {
-  color: #633;
-  font-weight: bold;
-}
-
 /*---------------------------------------
     Education section              
 -----------------------------------------*/
 
-#education {
-  background: #E3AE57;
-}
-
-/* Updated to WebP */
 #education .education-img {
   background: url('../img/education-img.webp') no-repeat;
 }
@@ -433,16 +419,10 @@ a:hover, a:active, a:focus {
   margin-right: 14px;
 }
 
-#education small {
-  color: #886D1E;
-  font-weight: bold;
-}
-
 /*---------------------------------------
    Works section              
 -----------------------------------------*/
 
-/* Updated to WebP */
 #works {
     background: url('../img/works-bg.webp') 50% 0 repeat-y fixed;
     background-size: cover;
@@ -513,17 +493,12 @@ a:hover, a:active, a:focus {
     Contact section              
 -----------------------------------------*/
 
-#contact {
-  background: #E9724C;
-}
-
 #contact .contact-form,
 #contact .contact-thumb {
   padding: 22px 32px 22px 32px;
   min-height: 75vh;
 }
 
-/* Updated to WebP */
 #contact .contact-img {
   background: url('../img/contact-img.webp') no-repeat;
   min-height: 75vh;
@@ -534,17 +509,16 @@ a:hover, a:active, a:focus {
   padding-bottom: 6px;
 }
 
-#contact .form-control::-moz-placeholder{color:#ffffff;opacity:1}
-#contact .form-control:-ms-input-placeholder{color:#ffffff}
-#contact .form-control::-webkit-input-placeholder{color:#ffffff}
+#contact .form-control::-moz-placeholder{color:#222;opacity:1}
+#contact .form-control:-ms-input-placeholder{color:#222}
+#contact .form-control::-webkit-input-placeholder{color:#222}
 
 #contact .form-control {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #E3AE57;
+  border-bottom: 2px solid #222;
   border-radius: 0px;
   box-shadow: none;
-  color: #ffffff;
   font-size: 18px;
   margin-top: 10px;
   margin-bottom: 25px;
@@ -552,25 +526,17 @@ a:hover, a:active, a:focus {
 }
 
 #contact .form-control:focus {
-  border-bottom-color: #ffffff;
+  border-bottom-color: #000;
 }
 
 #contact input {
   height: 45px;
 }
 
-#contact input[type="submit"] {
-  background: #ffffff;
-  border: 2px solid transparent;
-  border-radius: 40px;
-  color: #161616;
-  padding-bottom: 10px;
-}
-
-#contact input[type="submit"]:hover {
-  background: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
+#contact button[type="submit"]:hover {
+  background: transparent !important;
+  color: #111 !important;
+  border: 2px solid #111 !important;
 }
 
 #contact .fa {
@@ -635,7 +601,6 @@ a:hover, a:active, a:focus {
 }
 
 .cv-item h4 {
-    color: #ffffff;
     margin-bottom: 2px;
     font-weight: 400;
 }
@@ -657,10 +622,6 @@ a:hover, a:active, a:focus {
     margin-bottom: 15px;
 }
 
-.ref-item h4 {
-    color: #ffffff;
-}
-
 .ref-item p {
     font-style: italic;
     font-size: 13px;
@@ -671,7 +632,6 @@ a:hover, a:active, a:focus {
     margin-right: 10px;
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .cv-content-row {
         flex-direction: column;
