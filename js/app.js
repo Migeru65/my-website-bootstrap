@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             y = courtHeight - ballSize; 
             vy *= -friction; 
             
+            // Stop micro-bounces at the bottom
             if (Math.abs(vy) < 1.5) vy = 0;
         }
 
@@ -103,17 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
         vy = 0;
     }
 
-    if (toggleBtn) {
-        toggleBtn.addEventListener("click", function(e) {
+    if (toggleBtn && ballWrapper) {
+        // We mix a little jQuery here for the smooth slide animation
+        $(toggleBtn).on("click", function(e) {
             e.preventDefault();
-            if (ballWrapper.style.display === "none") {
-                ballWrapper.style.display = "block";
+            
+            if ($(ballWrapper).is(":hidden")) {
+                $(ballWrapper).slideDown(500);
                 toggleBtn.innerText = "Close Demo";
                 resetBall(); 
                 clearInterval(animationInterval);
                 animationInterval = setInterval(updatePhysics, 20); 
+                
+                // Smooth scroll to the arena
+                $("html, body").animate({
+                    scrollTop: $(ballWrapper).offset().top - 120
+                }, 800);
             } else {
-                ballWrapper.style.display = "none";
+                $(ballWrapper).slideUp(500);
                 toggleBtn.innerText = "Play Physics Demo";
                 clearInterval(animationInterval); 
             }
